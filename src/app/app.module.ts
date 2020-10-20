@@ -1,3 +1,4 @@
+import { ImageRefComponent } from "./_components/image-ref/image-ref.component";
 import { PrivacyDialogComponent } from "./_components/privacy-dialog/privacy-dialog.component";
 import { ImprintDialogComponent } from "./_components/imprint-dialog/imprint-dialog.component";
 import { MatDialogModule } from "@angular/material/dialog";
@@ -23,6 +24,7 @@ import { CookieService } from "ngx-cookie-service";
     ImprintDialogComponent,
     ContactDialogComponent,
     PrivacyDialogComponent,
+    ImageRefComponent,
   ],
   imports: [
     BrowserModule,
