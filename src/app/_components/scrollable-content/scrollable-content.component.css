@@ -119,3 +119,29 @@
   align-content: flex-end;
   justify-content: center;
 }
+
+footer table {
+  width: 100%;
+  background-color: aqua;
+}
+
+footer table tr td button {
+  margin: 1vw;
+}
+
+#copyright-cell {
+  text-align: right;
+  padding: 2vw;
+}
+
+@media all and (max-width: 649px) {
+  #copyright-cell {
+    width: 190px;
+  }
+}
+
+@media all and (min-width: 650px) {
+  #copyright-cell {
+    width: 320px;
+  }
+}

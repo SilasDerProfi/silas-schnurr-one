@@ -26,7 +26,9 @@
       >
       </image-ref>
       <image-ref
-        link="mailto:silas@schnurr.one"
+        link="{{ 'mai' }}{{ 'lto:' }}{{ 'contact' }}{{ '@' }}{{
+          'schnurr.one'
+        }}"
         name="E-Mail"
         imagePath="/assets/social/128/mail_128.png"
       >
@@ -120,8 +122,16 @@
 </div>
 <div id="div-foot"></div>
 <footer>
-  <button mat-raised-button (click)="openImprint()">Imprint</button>
-  <button mat-raised-button (click)="openPrivacy()">Privacy</button>
-  <button mat-raised-button (click)="openContact()">Contact</button>
-  Nach oben. zuletzt aktuaisiert. Copyright and Design by Silas Schnurr
+  <table>
+    <tr>
+      <td>
+        <button mat-button (click)="openImprint()">Imprint</button>
+
+        <button mat-button (click)="openPrivacy()">Privacy</button>
+
+        <button mat-button (click)="openContact()">Contact</button>
+      </td>
+      <td id="copyright-cell">© Copyright and Design by Silas Schnurr</td>
+    </tr>
+  </table>
 </footer>
