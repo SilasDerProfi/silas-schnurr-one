@@ -1,0 +1,21 @@
+@media all and (max-width: 599px) {
+  img {
+    width: 20vw;
+    height: 20vw;
+    margin: 5vw;
+  }
+}
+
+@media all and (min-width: 600px) {
+  img {
+    width: 5vw;
+    height: 5vw;
+    max-width: 80px;
+    max-height: 80px;
+    margin: 2vw;
+  }
+}
+
+a {
+  pointer-events: all !important;
+}
