@@ -18,4 +18,12 @@
 
 a {
   pointer-events: all !important;
+  user-select: none;
+}
+
+img {
+  transition: transform 0.5s;
+}
+img:hover {
+  transform: scale(1.2) !important;
 }
