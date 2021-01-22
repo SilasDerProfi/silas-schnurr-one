@@ -14,7 +14,6 @@ export class AppComponent {
 
     document.addEventListener("keyup", (event) => {
       this.downKeys.set(event.key.toLowerCase(), false);
-      console.log(this.downKeys);
     });
   }
 

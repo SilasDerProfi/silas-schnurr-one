@@ -29,8 +29,9 @@ export class ScrollableContentComponent implements OnInit {
       var darkColor = "#3a3a3a" + opt;
       document.getElementById("main-content-banner").style.color = lightcolor;
       document.getElementById("caption-hint").style.color = darkColor;
+      document.getElementById("img-arrow").style.opacity = `${optDecimal}`;
 
-      document.querySelectorAll("img").forEach((element) => {
+      document.querySelectorAll("a img").forEach((element) => {
         var lateZoomScale = optDecimal * 2;
         if (lateZoomScale > 1) lateZoomScale = 1;
         (element as HTMLElement).style.transform = `scale(${lateZoomScale})`;
@@ -64,7 +65,6 @@ export class ScrollableContentComponent implements OnInit {
         hCompleteText + "px";
 
       // make this script dynamic
-      // remove console.logs
     };
   }
 
@@ -82,17 +82,12 @@ export class ScrollableContentComponent implements OnInit {
     let id =
       window.innerHeight / window.scrollY > 2 ? "main-content" : "top-content";
     document.getElementById(id).scrollIntoView(true);
-    // beim scrollen ein blur effect....
   }
 
   openImprint() {
-    const dialogRef = this._dialog.open(ImprintDialogComponent, {
+    this._dialog.open(ImprintDialogComponent, {
       scrollStrategy: new NoopScrollStrategy(),
     });
-
-    // dialogRef
-    //   .afterClosed()
-    //   .subscribe((result) => console.log(`Dialog result: ${result}`));
   }
 
   openPrivacy() {

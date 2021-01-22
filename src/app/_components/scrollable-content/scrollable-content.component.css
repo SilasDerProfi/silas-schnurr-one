@@ -74,7 +74,7 @@
   margin-right: auto;
   left: 0;
   right: 0;
-  z-index: 2000;
+  z-index: 100;
   pointer-events: none;
 }
 
@@ -110,7 +110,7 @@
   font-family: arial;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 50;
   user-select: none;
 }
 
@@ -124,7 +124,7 @@
 
 footer table {
   width: 100%;
-  background-color: aqua;
+  border-top: 1px dashed #3a3a3a;
 }
 
 footer table tr td button {
@@ -146,4 +146,12 @@ footer table tr td button {
   #copyright-cell {
     width: 320px;
   }
+}
+
+img.arrow {
+  height: 70%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
