@@ -131,6 +131,10 @@ footer table tr td button {
   margin: 1vw;
 }
 
+mat-form-field {
+  height: 100%;
+}
+
 #copyright-cell {
   text-align: right;
   padding: 2vw;
