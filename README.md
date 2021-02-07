@@ -1,6 +1,8 @@
 # silas.schnurr.one Website
 
-[Published Version](https://silas.schnurr.one)
+![Build and Deploy](https://github.com/SilasDerProfi/silas-schnurr-one/workflows/Build%20and%20Deploy/badge.svg)
+
+[Visit silas.schnurr.one](https://silas.schnurr.one)
 
 ## Build
 
