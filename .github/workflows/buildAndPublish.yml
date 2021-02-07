@@ -1,12 +1,10 @@
 # build and publish
 
-name: Build and Update Web-Content
+name: Build and Deploy Web-Content
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
   update:
