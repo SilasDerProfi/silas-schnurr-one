@@ -68,8 +68,10 @@ export class ContactDialogComponent implements OnInit {
 
   send() {
     if (this.contactInformationGroup.valid) {
-      alert("Die Nachricht konnte nicht gesendet werden");
-      this.dialog.close();
+      alert(
+        "Die Nachricht konnte nicht gesendet werden. Bitte senden Sie eine E-Mail an contact@schnurr.one"
+      );
+      //this.dialog.close();
     }
   }
 }
