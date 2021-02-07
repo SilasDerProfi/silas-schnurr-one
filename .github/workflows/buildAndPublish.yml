@@ -1,6 +1,6 @@
 # build and publish
 
-name: Build and Deploy Web-Content
+name: Build and Deploy
 
 on:
   push:
