@@ -6,62 +6,15 @@
         <h2 id="caption-hint">Guten Tag :)</h2>
       </div>
     </div>
-    <div id="social-references">
-      <image-ref
-        link="https://github.com/SilasDerProfi"
-        name="GitHub"
-        imagePath="/assets/social/128/github_128.png"
-      >
-      </image-ref>
-      <image-ref
-        link="https://linkedin.com/in/silasschnurr"
-        name="LinkedIn"
-        imagePath="/assets/social/128/in_128.png"
-      >
-      </image-ref>
-      <image-ref
-        link="https://instagram.com/silas_sch"
-        name="Instagram"
-        imagePath="/assets/social/128/instagram_128.png"
-      >
-      </image-ref>
-      <image-ref
-        link="{{ 'mai' }}{{ 'lto:' }}{{ 'contact' }}{{ '@' }}{{
-          'schnurr.one'
-        }}"
-        name="E-Mail"
-        imagePath="/assets/social/128/mail_128.png"
-      >
-      </image-ref>
-      <image-ref
-        link="https://xing.com/profile/Silas_Schnurr2"
-        name="Xing"
-        imagePath="/assets/social/128/x_128.png"
-      >
-      </image-ref>
-    </div>
+    <social-links></social-links>
   </div>
 </div>
 <div id="main-content">
   <div id="main-content-banner" (click)="scrollContent()">
-    <!--The arrow is not in the center-->
     <img id="img-arrow" class="arrow" src="/assets/arrow.png" alt="˅" />
   </div>
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <website-content></website-content>
 </div>
-<div id="div-foot"></div>
 <footer>
-  <table>
-    <tr>
-      <td>
-        <button mat-button (click)="openImprint()">Impressum</button>
-        <!--Legal Notice-->
-
-        <button mat-button (click)="openPrivacy()">Datenschutz</button>
-        <!--Privacy-->
-        <button mat-button (click)="openContact()">Kontakt</button>
-      </td>
-      <td id="copyright-cell">© Copyright and Design by Silas Schnurr</td>
-    </tr>
-  </table>
+  <website-footer></website-footer>
 </footer>

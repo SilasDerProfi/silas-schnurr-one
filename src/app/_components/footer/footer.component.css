@@ -1,0 +1,45 @@
+table {
+  width: 100%;
+  border-top: 4px dashed #3a3a3a;
+}
+
+button {
+  margin: 1vw;
+}
+
+#options-td {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+#div-foot {
+  height: 50vh;
+}
+
+#copyright-cell {
+  text-align: right;
+  padding: 2vw;
+}
+
+@media all and (max-width: 649px) {
+  #copyright-cell {
+    width: 190px;
+  }
+
+  #language-select,
+  #theme-select {
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 650px) {
+  #copyright-cell {
+    width: 400px;
+  }
+
+  #language-select,
+  #theme-select {
+    margin: 0 2vw 0 2vw;
+    width: 40%;
+  }
+}

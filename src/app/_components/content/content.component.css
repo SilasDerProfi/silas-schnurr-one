@@ -1,0 +1,39 @@
+@media all and (min-width: 1500px) {
+  #div-cards div {
+    padding: min(1vh, 1vw);
+    width: calc(95vw / 4);
+  }
+}
+
+@media all and (min-width: 1300px) and (max-width: 1499px) {
+  #div-cards div {
+    padding: min(1vh, 1vw);
+    width: calc(95vw / 3);
+  }
+}
+
+@media all and (min-width: 850px) and (max-width: 1299px) {
+  #div-cards div {
+    padding: min(1vh, 1vw);
+    width: calc(95vw / 2);
+  }
+}
+
+@media all and (max-width: 849px) {
+  #div-cards div {
+    padding: min(1vh, 1vw);
+    width: 95vw;
+  }
+}
+
+#div-cards,
+#div-expansion-panels {
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#div-expansion-panels div {
+  width: 95vw;
+  padding: min(1vh, 1vw);
+}

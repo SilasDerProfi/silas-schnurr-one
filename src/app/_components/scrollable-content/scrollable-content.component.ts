@@ -1,9 +1,4 @@
-import { PrivacyDialogComponent } from "./../privacy-dialog/privacy-dialog.component";
-import { ImprintDialogComponent } from "./../imprint-dialog/imprint-dialog.component";
-import { ContactDialogComponent } from "./../contact-dialog/contact-dialog.component";
-import { MatDialog } from "@angular/material/dialog";
 import { Component, OnInit } from "@angular/core";
-import { NoopScrollStrategy } from "@angular/cdk/overlay";
 
 @Component({
   selector: "scrollable-content",
@@ -11,7 +6,7 @@ import { NoopScrollStrategy } from "@angular/cdk/overlay";
   styleUrls: ["./scrollable-content.component.css"],
 })
 export class ScrollableContentComponent implements OnInit {
-  constructor(private _dialog: MatDialog) {
+  constructor() {
     window.onscroll = (_) => {
       var rect = document
         .getElementById("main-content-banner")
@@ -82,23 +77,5 @@ export class ScrollableContentComponent implements OnInit {
     let id =
       window.innerHeight / window.scrollY > 2 ? "main-content" : "top-content";
     document.getElementById(id).scrollIntoView(true);
-  }
-
-  openImprint() {
-    this._dialog.open(ImprintDialogComponent, {
-      scrollStrategy: new NoopScrollStrategy(),
-    });
-  }
-
-  openPrivacy() {
-    this._dialog.open(PrivacyDialogComponent, {
-      scrollStrategy: new NoopScrollStrategy(),
-    });
-  }
-
-  openContact() {
-    this._dialog.open(ContactDialogComponent, {
-      scrollStrategy: new NoopScrollStrategy(),
-    });
   }
 }

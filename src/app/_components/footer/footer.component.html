@@ -1,0 +1,38 @@
+<div id="div-foot"></div>
+<table>
+  <tr>
+    <td>
+      <!--Legal Notice-->
+      <button mat-button (click)="openImprint()">Impressum</button>
+
+      <!--Privacy-->
+      <button mat-button (click)="openPrivacy()">Datenschutz</button>
+
+      <!--Contact-->
+      <button mat-button (click)="openContact()">Kontakt</button>
+    </td>
+    <td id="copyright-cell">© 2021 Copyright and Design by Silas Schnurr</td>
+  </tr>
+  <tr>
+    <td id="options-td" colspan="2">
+      <mat-form-field id="language-select" appearance="standard">
+        <mat-label>Sprache</mat-label>
+        <mat-select value="{{ languages[0].isoCode }}">
+          <mat-option
+            *ngFor="let language of languages"
+            [value]="language.isoCode"
+          >
+            {{ language.nativeName }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field id="theme-select" appearance="standard">
+        <mat-label>Farbthema</mat-label>
+        <mat-select value="light">
+          <mat-option value="light"> hell </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </td>
+  </tr>
+</table>

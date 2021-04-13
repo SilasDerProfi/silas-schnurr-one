@@ -1,4 +1,4 @@
-import { FormControl, ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 import { ImageRefComponent } from "./_components/image-ref/image-ref.component";
 import { PrivacyDialogComponent } from "./_components/privacy-dialog/privacy-dialog.component";
 import { ImprintDialogComponent } from "./_components/imprint-dialog/imprint-dialog.component";
@@ -19,6 +19,10 @@ import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { CookieService } from "ngx-cookie-service";
+import { FooterComponent } from "./_components/footer/footer.component";
+import { ContentComponent } from "./_components/content/content.component";
+import { SocialLinksComponent } from "./_components/social-links/social-links.component";
+import { MatSelectModule } from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -29,6 +33,9 @@ import { CookieService } from "ngx-cookie-service";
     ContactDialogComponent,
     PrivacyDialogComponent,
     ImageRefComponent,
+    FooterComponent,
+    ContentComponent,
+    SocialLinksComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +48,7 @@ import { CookieService } from "ngx-cookie-service";
     MatCheckboxModule,
     MatInputModule,
     ReactiveFormsModule,
+    MatSelectModule,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
