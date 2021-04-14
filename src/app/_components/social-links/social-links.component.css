@@ -1,7 +1,18 @@
 #social-references {
-  height: 85vh;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-end;
   justify-content: center;
+}
+
+@media all and (max-width: 599px) {
+  #social-references {
+    height: 85vh;
+  }
+}
+
+@media all and (min-width: 600px) {
+  #social-references {
+    height: 25vh;
+  }
 }

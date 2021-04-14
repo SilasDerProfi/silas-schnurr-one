@@ -89,3 +89,15 @@ img.arrow {
   user-select: none;
   pointer-events: none;
 }
+
+#silas-img {
+  border-radius: 100%;
+  height: 40vh;
+  margin-top: 20vh;
+}
+
+@media all and (max-width: 599px) {
+  #silas-img {
+    display: none;
+  }
+}
