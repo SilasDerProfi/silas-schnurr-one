@@ -23,6 +23,8 @@ import { FooterComponent } from "./_components/footer/footer.component";
 import { ContentComponent } from "./_components/content/content.component";
 import { SocialLinksComponent } from "./_components/social-links/social-links.component";
 import { MatSelectModule } from "@angular/material/select";
+import { CardComponent } from "./_components/card/card.component";
+import { MatChipsModule } from "@angular/material/chips";
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { MatSelectModule } from "@angular/material/select";
     FooterComponent,
     ContentComponent,
     SocialLinksComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,7 @@ import { MatSelectModule } from "@angular/material/select";
     MatInputModule,
     ReactiveFormsModule,
     MatSelectModule,
+    MatChipsModule,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
