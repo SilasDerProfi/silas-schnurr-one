@@ -1,0 +1,26 @@
+mat-card {
+  margin: 10% 5% 0% 5%;
+  padding: 0% 10% 5% 10%;
+
+  border: 1px solid #3a3a3a;
+}
+
+mat-chip-list {
+  padding: 5%;
+}
+
+div {
+  padding-right: 20%;
+  padding-left: 20%;
+}
+
+img {
+  pointer-events: none;
+  object-fit: contain;
+}
+
+mat-card-actions,
+mat-card-content {
+  font-size: 2em;
+  text-align: center;
+}

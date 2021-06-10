@@ -43,3 +43,9 @@ button {
     width: 40%;
   }
 }
+
+#icons8hint {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  opacity: 0.6;
+}
