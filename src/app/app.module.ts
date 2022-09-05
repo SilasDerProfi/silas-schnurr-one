@@ -25,6 +25,7 @@ import { SocialLinksComponent } from "./_components/social-links/social-links.co
 import { MatSelectModule } from "@angular/material/select";
 import { CardComponent } from "./_components/card/card.component";
 import { MatChipsModule } from "@angular/material/chips";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { MatChipsModule } from "@angular/material/chips";
     ReactiveFormsModule,
     MatSelectModule,
     MatChipsModule,
+    HttpClientModule,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],

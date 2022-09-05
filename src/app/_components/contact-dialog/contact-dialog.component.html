@@ -19,14 +19,6 @@
       }}</mat-error>
     </mat-form-field>
 
-    <mat-checkbox
-      id="copy-input"
-      *ngIf="emailControl.value && emailControl.valid"
-      color="accent"
-      matInput
-      [formControl]="copyControl"
-      >Kopie an mich senden</mat-checkbox
-    >
     <mat-form-field color="primary" appearance="legacy" id="subject-input">
       <mat-label>Betreff</mat-label>
       <input matInput placeholder="Allons-y!" [formControl]="subjectControl" />

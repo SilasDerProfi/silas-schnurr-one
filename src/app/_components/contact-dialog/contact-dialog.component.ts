@@ -6,6 +6,7 @@ import {
   Validators,
 } from "@angular/forms";
 import { MatDialogRef } from "@angular/material/dialog";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Component({
   selector: "app-contact-dialog",
@@ -16,7 +17,6 @@ export class ContactDialogComponent implements OnInit {
   contactInformationGroup: FormGroup;
   nameControl = new FormControl("");
   emailControl = new FormControl("", [Validators.email]);
-  copyControl = new FormControl(false);
   subjectControl = new FormControl("");
   messageControl = new FormControl("", [Validators.required]);
   randomQuote = "";
@@ -42,7 +42,8 @@ export class ContactDialogComponent implements OnInit {
 
   constructor(
     formBuilder: FormBuilder,
-    public dialog: MatDialogRef<ContactDialogComponent>
+    public dialog: MatDialogRef<ContactDialogComponent>,
+    private http: HttpClient
   ) {
     this.contactInformationGroup = formBuilder.group({
       email: this.emailControl,
@@ -51,9 +52,8 @@ export class ContactDialogComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.randomQuote = this.quotes[
-      Math.floor(Math.random() * this.quotes.length)
-    ];
+    this.randomQuote =
+      this.quotes[Math.floor(Math.random() * this.quotes.length)];
   }
 
   getEMailErrorMessage() {
@@ -67,11 +67,37 @@ export class ContactDialogComponent implements OnInit {
   }
 
   send() {
-    if (this.contactInformationGroup.valid) {
-      alert(
-        "Die Nachricht konnte nicht gesendet werden. Bitte senden Sie eine E-Mail an contact@schnurr.one"
+    if (!this.contactInformationGroup.valid) return;
+
+    const headers = new HttpHeaders({ "Content-Type": "application/json" });
+    this.http
+      .post(
+        "https://formspree.io/f/xvovarzp",
+        {
+          name: this.nameControl.value,
+          replyto: this.emailControl.value,
+          subject: this.subjectControl.value,
+          message: this.messageControl.value,
+        },
+        { headers: headers }
+      )
+      .subscribe(
+        (response: any) => {
+          console.log(response);
+          if (response.ok) {
+            this.dialog.close();
+          } else {
+            alert(
+              "Die Nachricht konnte leider nicht gesendet werden. Du kannst Sie aber gerne selbst an contact@schnurr.one senden."
+            );
+          }
+        },
+        (error) => {
+          console.log(error);
+          alert(
+            "Die Nachricht konnte leider nicht gesendet werden. Du kannst Sie aber gerne selbst an contact@schnurr.one senden."
+          );
+        }
       );
-      //this.dialog.close();
-    }
   }
 }
