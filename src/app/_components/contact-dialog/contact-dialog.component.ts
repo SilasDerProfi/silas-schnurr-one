@@ -88,14 +88,14 @@ export class ContactDialogComponent implements OnInit {
             this.dialog.close();
           } else {
             alert(
-              "Die Nachricht konnte leider nicht gesendet werden. Du kannst Sie aber gerne selbst an contact@schnurr.one senden."
+              "Die Nachricht konnte leider nicht gesendet werden. Du kannst sie aber gerne selbst an contact@schnurr.one senden."
             );
           }
         },
         (error) => {
           console.log(error);
           alert(
-            "Die Nachricht konnte leider nicht gesendet werden. Du kannst Sie aber gerne selbst an contact@schnurr.one senden."
+            "Die Nachricht konnte leider nicht gesendet werden. Du kannst sie aber gerne selbst an contact@schnurr.one senden."
           );
         }
       );
